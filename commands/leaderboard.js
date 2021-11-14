@@ -6,9 +6,9 @@ exports.run = async (client, message, args) => {
   const leaderboard = data.sort((a,b) => b.level - a.level).map((user, index) => `${index + 1}. ${message.guild.members.cache.get(user.userID) ? message.guild.members.cache.get(user.userID) : "Kullanici bulunamadi."} - (${user.level} level)`).slice(0, 10).join("\n")
   
      const levelEmbed = new MessageEmbed()
-  .setAuthor(message.guild.name+' TOP10', message.guild.iconURL())
+  .setAuthor(message.guild.name+' TOP 10 AKTİFLİK', message.guild.iconURL())
    .setThumbnail(message.author.avatarURL())
-  .setDescription(`Melodia discord level sistemi sıralaması, sadece metin kanallarındaki istatistiği göstermektedir. \n \n ${leaderboard}`)
+  .setDescription(`**${message.guild.name}** Sunucunun en aktif ilk 10 sıralamasıdır. Burada ilk 3. sıralamasına girerek rol ve hediye kazanabilirsin. **Sadece metin kanalları.** \n \n ${leaderboard}`)
   .setColor('GREEN')
   message.channel.send({embeds: [levelEmbed]})
   

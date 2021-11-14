@@ -42,4 +42,4 @@ client.on('messageCreate', async message => {
 });
 
 require("./events.js")(client);
-client.login("ODkwMjY4MzY5NTYyMDA1NTA0.YUtVBw.GJzvVEq3dw6MzwlZAH90UGpkl7s");
+client.login("ODkzMzM3NjAwNjU4NjY1NDgz.YVZ_eQ.NKZnD2DLfboVRlMafPjrsItsazc");

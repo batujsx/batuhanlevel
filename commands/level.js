@@ -34,13 +34,14 @@ const rank = new canvacord.Rank()
     .setProgressBar("#12ff00", "COLOR")
     .setUsername(member.user.username)
     .setRankColor('transparent', 'transparent')
-    .setBackground('IMAGE','https://fabricmc.net/assets/aof4.png')
+    .setBackground('IMAGE','https://cdn.discordapp.com/attachments/909494146421624942/909500813620174918/24cf8be1297fd32.png')
     .setDiscriminator(member.user.discriminator);
 
 rank.build()
     .then(data => {
         const attachment = new MessageAttachment(data, "RankCard.png");
-        message.channel.send({content:`**LEVEL BİLGİLERİN**`,files:[attachment]});
+        message.channel.send({content:`${member} 
+        Kullanıcısının level bilgileri.`,files:[attachment]});
     });
   return;
   }
